@@ -10,5 +10,8 @@ describe(`${<CheckboxGroup />}`, ()=> {
     const wrapper = mount(<CheckboxGroup />);
     expect(wrapper.find("form")).toHaveLength(1)
   })
-  
+  it('checkbox cliked', () => {
+    const wrapper = mount(<CheckboxGroup />);
+    expect(wrapper.find('input[type="checkbox"]').last().simulate("change")).toHaveLength(1)
+  })
 })
